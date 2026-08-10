@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+.Python
+*.txt
+!requirements.txt
+.DS_Store
