@@ -1,6 +1,15 @@
 __pycache__/
 *.py[cod]
 .Python
+.DS_Store
+
+# Keep dependency pin; ignore result lists and other generated text
 *.txt
 !requirements.txt
-.DS_Store
+
+# Instagram data exports — never commit personal follower/following data
+connections/
+followers_and_following/
+instagram*/
+**/following.json
+**/followers_*.json
