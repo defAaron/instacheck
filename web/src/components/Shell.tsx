@@ -8,7 +8,7 @@ type ShellProps = {
 
 export function Shell({ children, nav, onHome }: ShellProps) {
   const brandClass =
-    "font-serif text-[1.7rem] leading-none tracking-tight text-foreground"
+    "font-serif text-[1.7rem] font-semibold leading-none tracking-tight text-foreground"
 
   return (
     <div className="relative flex min-h-svh flex-col">

@@ -44,7 +44,7 @@ export function Landing({
       >
         <div className="flex min-h-0 flex-1 flex-col">
           <section className="flex flex-1 flex-col items-center justify-center px-5 py-10 text-center sm:px-10">
-            <h1 className="font-serif text-[2.75rem] leading-[0.95] tracking-tight text-foreground sm:text-6xl md:text-7xl">
+            <h1 className="font-serif text-[2.75rem] font-bold leading-[0.95] tracking-tight text-foreground sm:text-6xl md:text-7xl">
               Who you follow
               <br />
               who doesn’t follow back
@@ -108,13 +108,13 @@ export function Landing({
         </div>
 
         <section id="how" className="flex justify-center px-5 py-16 sm:px-10">
-          <div className="w-full max-w-xl border border-foreground bg-white px-8 py-10 sm:px-12 sm:py-12">
-            <h2 className="text-center font-serif text-3xl tracking-tight text-foreground sm:text-4xl">
+          <div className="w-full max-w-xl border border-foreground bg-white px-8 py-10 font-sans text-[11px] font-medium tracking-[0.18em] text-foreground uppercase sm:px-12 sm:py-12">
+            <h2 className="text-center text-sm font-bold tracking-[0.22em] sm:text-base">
               How to download
             </h2>
-            <ol className="mt-8 space-y-5 text-base leading-relaxed text-foreground sm:text-lg">
+            <ol className="mt-8 space-y-5 leading-relaxed">
               <li>
-                <span className="mr-3 font-serif text-muted-foreground">01</span>
+                <span className="mr-3 text-muted-foreground">01</span>
                 In Instagram or{" "}
                 <a
                   href="https://accountscenter.instagram.com/"
@@ -127,15 +127,15 @@ export function Landing({
                 : Settings → Your activity → Download your information.
               </li>
               <li>
-                <span className="mr-3 font-serif text-muted-foreground">02</span>
+                <span className="mr-3 text-muted-foreground">02</span>
                 Choose JSON, not HTML.
               </li>
               <li>
-                <span className="mr-3 font-serif text-muted-foreground">03</span>
+                <span className="mr-3 text-muted-foreground">03</span>
                 Include Followers and following.
               </li>
               <li>
-                <span className="mr-3 font-serif text-muted-foreground">04</span>
+                <span className="mr-3 text-muted-foreground">04</span>
                 Wait for the email, then drop the ZIP or folder here.
               </li>
             </ol>

@@ -75,7 +75,7 @@ export function Results({ handle, analysis, onReset }: ResultsProps) {
     >
       <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col gap-10 px-5 py-12 sm:px-10">
         <header className="space-y-5">
-          <h1 className="font-serif text-4xl leading-none tracking-tight text-foreground sm:text-5xl">
+          <h1 className="font-serif text-4xl font-bold leading-none tracking-tight text-foreground sm:text-5xl">
             {displayHandle ? `@${displayHandle}` : "Your export"}
           </h1>
           <div className="flex flex-wrap gap-2">

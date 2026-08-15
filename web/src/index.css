@@ -27,16 +27,16 @@
 
 :root {
   --background: #f3f2ee;
-  --foreground: #111111;
+  --foreground: #000000;
   --card: transparent;
-  --primary: #111111;
+  --primary: #000000;
   --primary-foreground: #f3f2ee;
   --secondary: transparent;
-  --secondary-foreground: #111111;
+  --secondary-foreground: #000000;
   --muted: #ecebe6;
-  --muted-foreground: #6a6a64;
-  --border: #111111;
-  --ring: #111111;
+  --muted-foreground: #3a3a36;
+  --border: #000000;
+  --ring: #000000;
   --destructive: #8a1f1a;
   --grid: rgb(17 17 17 / 0.09);
 }
@@ -48,7 +48,7 @@
 
   html {
     color-scheme: light;
-    @apply scroll-smooth bg-background text-foreground font-sans antialiased;
+    @apply scroll-smooth bg-background text-foreground font-sans font-medium;
   }
 
   body {
