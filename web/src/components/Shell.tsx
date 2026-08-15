@@ -27,6 +27,11 @@ export function Shell({ children, nav, onHome }: ShellProps) {
         ) : null}
       </header>
       {children}
+      <footer className="px-5 pb-8 pt-6 text-center sm:px-10">
+        <p className="text-[10px] tracking-[0.22em] text-muted-foreground uppercase">
+          Made by Aaron Dutta™
+        </p>
+      </footer>
     </div>
   )
 }

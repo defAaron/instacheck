@@ -106,42 +106,42 @@ export function Landing({
             )}
           </section>
         </div>
-      </Shell>
 
-      <section id="how" className="flex justify-center px-5 py-16 sm:px-10">
-        <div className="w-full max-w-xl border border-foreground bg-white px-8 py-10 sm:px-12 sm:py-12">
-          <h2 className="text-center font-serif text-3xl tracking-tight text-foreground sm:text-4xl">
-            How to download
-          </h2>
-          <ol className="mt-8 space-y-5 text-base leading-relaxed text-foreground sm:text-lg">
-            <li>
-              <span className="mr-3 font-serif text-muted-foreground">01</span>
-              In Instagram or{" "}
-              <a
-                href="https://accountscenter.instagram.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-2"
-              >
-                accountscenter.instagram.com
-              </a>
-              : Settings → Your activity → Download your information.
-            </li>
-            <li>
-              <span className="mr-3 font-serif text-muted-foreground">02</span>
-              Choose JSON, not HTML.
-            </li>
-            <li>
-              <span className="mr-3 font-serif text-muted-foreground">03</span>
-              Include Followers and following.
-            </li>
-            <li>
-              <span className="mr-3 font-serif text-muted-foreground">04</span>
-              Wait for the email, then drop the ZIP or folder here.
-            </li>
-          </ol>
-        </div>
-      </section>
+        <section id="how" className="flex justify-center px-5 py-16 sm:px-10">
+          <div className="w-full max-w-xl border border-foreground bg-white px-8 py-10 sm:px-12 sm:py-12">
+            <h2 className="text-center font-serif text-3xl tracking-tight text-foreground sm:text-4xl">
+              How to download
+            </h2>
+            <ol className="mt-8 space-y-5 text-base leading-relaxed text-foreground sm:text-lg">
+              <li>
+                <span className="mr-3 font-serif text-muted-foreground">01</span>
+                In Instagram or{" "}
+                <a
+                  href="https://accountscenter.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-2"
+                >
+                  accountscenter.instagram.com
+                </a>
+                : Settings → Your activity → Download your information.
+              </li>
+              <li>
+                <span className="mr-3 font-serif text-muted-foreground">02</span>
+                Choose JSON, not HTML.
+              </li>
+              <li>
+                <span className="mr-3 font-serif text-muted-foreground">03</span>
+                Include Followers and following.
+              </li>
+              <li>
+                <span className="mr-3 font-serif text-muted-foreground">04</span>
+                Wait for the email, then drop the ZIP or folder here.
+              </li>
+            </ol>
+          </div>
+        </section>
+      </Shell>
     </div>
   )
 }
