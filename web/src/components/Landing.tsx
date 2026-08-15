@@ -5,7 +5,6 @@ import { buttonVariants } from "@/components/ui/button-variants"
 import { Input } from "@/components/ui/input"
 import { useFileDrop } from "@/lib/useFileDrop"
 import { cn } from "@/lib/utils"
-import hero from "@/assets/hero.png"
 
 type LandingProps = {
   handle: string
@@ -66,15 +65,9 @@ export function Landing({
             </label>
           </section>
 
-          <section className="flex flex-col gap-10 px-5 pb-8 sm:flex-row sm:items-end sm:justify-between sm:px-10">
-            <img
-              src={hero}
-              alt=""
-              className="hidden h-52 w-36 border border-foreground object-cover sm:block"
-            />
-
-            <aside className="flex w-full max-w-sm flex-col gap-6">
-              <label className="block space-y-2">
+          <section className="px-5 pb-8 sm:px-10">
+            <div className="grid grid-cols-1 border border-foreground bg-[#e6e4de] sm:grid-cols-2">
+              <label className="flex flex-col justify-center space-y-2 border-foreground p-6 sm:border-r sm:p-8">
                 <span className="block text-[10px] tracking-[0.22em] text-muted-foreground uppercase">
                   Handle
                 </span>
@@ -84,14 +77,16 @@ export function Landing({
                   placeholder="username"
                   autoComplete="username"
                   spellCheck={false}
+                  className="h-[clamp(2.5rem,3.2vw,3.5rem)] bg-transparent text-[clamp(0.875rem,1.05vw,1.125rem)]"
                 />
               </label>
 
-              <div className="space-y-2">
+              <div className="flex flex-col space-y-2 border-t border-foreground p-6 sm:border-t-0 sm:p-8">
                 <p className="text-[10px] tracking-[0.22em] text-muted-foreground uppercase">
                   Export
                 </p>
                 <DropZone
+                  className="flex-1"
                   disabled={loading}
                   highlighted={active}
                   fileInputId={fileInputId}
@@ -99,51 +94,53 @@ export function Landing({
                   onFiles={onFiles}
                 />
               </div>
+            </div>
 
-              {error && (
-                <p
-                  role="alert"
-                  className="border border-destructive px-3 py-2 text-sm text-destructive"
-                >
-                  {error}
-                </p>
-              )}
-            </aside>
+            {error && (
+              <p
+                role="alert"
+                className="mt-4 border border-destructive bg-[#e6e4de] px-3 py-2 text-sm text-destructive"
+              >
+                {error}
+              </p>
+            )}
           </section>
         </div>
       </Shell>
 
-      <section id="how" className="w-full max-w-md px-5 py-16 sm:px-10">
-        <p className="text-[10px] tracking-[0.22em] text-muted-foreground uppercase">
-          How to download
-        </p>
-        <ol className="mt-4 space-y-3 text-xs leading-relaxed text-muted-foreground">
-          <li>
-            <span className="mr-2 text-foreground">01</span>
-            In Instagram or{" "}
-            <a
-              href="https://accountscenter.instagram.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-foreground underline underline-offset-2"
-            >
-              accountscenter.instagram.com
-            </a>
-            : Settings → Your activity → Download your information.
-          </li>
-          <li>
-            <span className="mr-2 text-foreground">02</span>
-            Choose JSON, not HTML.
-          </li>
-          <li>
-            <span className="mr-2 text-foreground">03</span>
-            Include Followers and following.
-          </li>
-          <li>
-            <span className="mr-2 text-foreground">04</span>
-            Wait for the email, then drop the ZIP or folder here.
-          </li>
-        </ol>
+      <section id="how" className="flex justify-center px-5 py-16 sm:px-10">
+        <div className="w-full max-w-xl border border-foreground bg-white px-8 py-10 sm:px-12 sm:py-12">
+          <h2 className="text-center font-serif text-3xl tracking-tight text-foreground sm:text-4xl">
+            How to download
+          </h2>
+          <ol className="mt-8 space-y-5 text-base leading-relaxed text-foreground sm:text-lg">
+            <li>
+              <span className="mr-3 font-serif text-muted-foreground">01</span>
+              In Instagram or{" "}
+              <a
+                href="https://accountscenter.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2"
+              >
+                accountscenter.instagram.com
+              </a>
+              : Settings → Your activity → Download your information.
+            </li>
+            <li>
+              <span className="mr-3 font-serif text-muted-foreground">02</span>
+              Choose JSON, not HTML.
+            </li>
+            <li>
+              <span className="mr-3 font-serif text-muted-foreground">03</span>
+              Include Followers and following.
+            </li>
+            <li>
+              <span className="mr-3 font-serif text-muted-foreground">04</span>
+              Wait for the email, then drop the ZIP or folder here.
+            </li>
+          </ol>
+        </div>
       </section>
     </div>
   )

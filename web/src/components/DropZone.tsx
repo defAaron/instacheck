@@ -6,6 +6,7 @@ type DropZoneProps = {
   highlighted?: boolean
   fileInputId?: string
   folderInputId?: string
+  className?: string
   onFiles: (files: File[]) => void
 }
 
@@ -14,6 +15,7 @@ export function DropZone({
   highlighted,
   fileInputId,
   folderInputId,
+  className,
   onFiles,
 }: DropZoneProps) {
   const generatedFileId = useId()
@@ -31,17 +33,18 @@ export function DropZone({
   return (
     <div
       className={cn(
-        "border border-foreground px-4 py-5 text-left transition-colors",
+        "border border-foreground px-[clamp(1rem,2vw,1.75rem)] py-[clamp(1.25rem,3.5vw,2.5rem)] text-left transition-colors",
         highlighted && "bg-foreground text-background",
         disabled && "opacity-40",
+        className,
       )}
     >
-      <p className="text-[10px] tracking-[0.22em] uppercase">
+      <p className="text-[clamp(10px,0.85vw,12px)] tracking-[0.22em] uppercase">
         ZIP, folder, or JSON
       </p>
       <p
         className={cn(
-          "mt-3 text-sm",
+          "mt-3 text-[clamp(0.875rem,1.05vw,1.125rem)]",
           highlighted ? "text-background/70" : "text-muted-foreground",
         )}
       >
