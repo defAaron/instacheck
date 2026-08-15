@@ -13,3 +13,7 @@ followers_and_following/
 instagram*/
 **/following.json
 **/followers_*.json
+
+# Web app
+web/node_modules/
+web/dist/
