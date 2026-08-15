@@ -33,12 +33,9 @@ export function Landing({
             <a href="#how" className="hover:underline underline-offset-4">
               How
             </a>
-            <label
-              htmlFor={fileInputId}
-              className={cn(buttonVariants(), "cursor-pointer")}
-            >
+            <a href="#export" className={cn(buttonVariants())}>
               Drop export
-            </label>
+            </a>
           </>
         }
       >
@@ -53,19 +50,54 @@ export function Landing({
               Parse your official Instagram data export in this browser. Files
               never leave your device — no login, no upload, no scraping.
             </p>
-            <label
-              htmlFor={fileInputId}
+            <a
+              href="#export"
               className={cn(
                 buttonVariants({ size: "lg" }),
-                "mt-8 cursor-pointer",
+                "mt-8",
                 loading && "pointer-events-none opacity-40",
               )}
             >
               {loading ? "Reading export" : "Drop export"}
-            </label>
+            </a>
           </section>
 
-          <section className="px-5 pb-8 sm:px-10">
+          <section id="how" className="flex justify-center px-5 py-16 sm:px-10">
+            <div className="w-full max-w-xl border border-foreground bg-white px-8 py-10 font-sans text-[11px] font-medium tracking-[0.18em] text-foreground uppercase sm:px-12 sm:py-12">
+              <h2 className="text-center text-sm font-bold tracking-[0.22em] sm:text-base">
+                How to download
+              </h2>
+              <ol className="mt-8 space-y-5 leading-relaxed">
+                <li>
+                  <span className="mr-3 text-muted-foreground">01</span>
+                  In Instagram or{" "}
+                  <a
+                    href="https://accountscenter.instagram.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline underline-offset-2"
+                  >
+                    accountscenter.instagram.com
+                  </a>
+                  : Settings → Your activity → Download your information.
+                </li>
+                <li>
+                  <span className="mr-3 text-muted-foreground">02</span>
+                  Choose JSON, not HTML.
+                </li>
+                <li>
+                  <span className="mr-3 text-muted-foreground">03</span>
+                  Include Followers and following.
+                </li>
+                <li>
+                  <span className="mr-3 text-muted-foreground">04</span>
+                  Wait for the email, then drop the ZIP or folder here.
+                </li>
+              </ol>
+            </div>
+          </section>
+
+          <section id="export" className="px-5 pb-8 sm:px-10">
             <div className="grid grid-cols-1 border border-foreground bg-[#e6e4de] sm:grid-cols-2">
               <label className="flex flex-col justify-center space-y-2 border-foreground p-6 sm:border-r sm:p-8">
                 <span className="block text-[10px] tracking-[0.22em] text-muted-foreground uppercase">
@@ -106,41 +138,6 @@ export function Landing({
             )}
           </section>
         </div>
-
-        <section id="how" className="flex justify-center px-5 py-16 sm:px-10">
-          <div className="w-full max-w-xl border border-foreground bg-white px-8 py-10 font-sans text-[11px] font-medium tracking-[0.18em] text-foreground uppercase sm:px-12 sm:py-12">
-            <h2 className="text-center text-sm font-bold tracking-[0.22em] sm:text-base">
-              How to download
-            </h2>
-            <ol className="mt-8 space-y-5 leading-relaxed">
-              <li>
-                <span className="mr-3 text-muted-foreground">01</span>
-                In Instagram or{" "}
-                <a
-                  href="https://accountscenter.instagram.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline underline-offset-2"
-                >
-                  accountscenter.instagram.com
-                </a>
-                : Settings → Your activity → Download your information.
-              </li>
-              <li>
-                <span className="mr-3 text-muted-foreground">02</span>
-                Choose JSON, not HTML.
-              </li>
-              <li>
-                <span className="mr-3 text-muted-foreground">03</span>
-                Include Followers and following.
-              </li>
-              <li>
-                <span className="mr-3 text-muted-foreground">04</span>
-                Wait for the email, then drop the ZIP or folder here.
-              </li>
-            </ol>
-          </div>
-        </section>
       </Shell>
     </div>
   )

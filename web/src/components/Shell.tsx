@@ -31,6 +31,14 @@ export function Shell({ children, nav, onHome }: ShellProps) {
         <p className="text-[10px] tracking-[0.22em] text-muted-foreground uppercase">
           Made by Aaron Dutta™
         </p>
+        <a
+          href="https://aarondutta.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-2 inline-block text-[10px] tracking-[0.22em] text-muted-foreground uppercase underline underline-offset-4 hover:text-foreground"
+        >
+          Visit creator&apos;s page
+        </a>
       </footer>
     </div>
   )
