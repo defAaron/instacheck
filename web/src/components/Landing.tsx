@@ -1,5 +1,6 @@
 import { useId } from "react"
 import { DropZone } from "@/components/DropZone"
+import { GithubIcon } from "@/components/GithubIcon"
 import { Shell } from "@/components/Shell"
 import { buttonVariants } from "@/components/ui/button-variants"
 import { Input } from "@/components/ui/input"
@@ -35,6 +36,15 @@ export function Landing({
             </a>
             <a href="#export" className={cn(buttonVariants())}>
               Drop export
+            </a>
+            <a
+              href="https://github.com/defAaron/instacheck"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View on GitHub"
+              className="inline-flex items-center justify-center text-foreground outline-none hover:text-muted-foreground focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-foreground normal-case"
+            >
+              <GithubIcon className="size-4" />
             </a>
           </>
         }
